@@ -11,7 +11,7 @@ import prisma from "./utils/db";
 import { requireUser } from "@/lib/requierdUser";
 import { UTApi } from "uploadthing/server";
 import { strip } from "@/lib/strip";
-
+// https://blog-create-six.vercel.app/
 export async function CreateStiesAction(prevState: any, formData: FormData) {
   const user = await requireUser();
   const submssion = await parseWithZod(formData, {
@@ -216,8 +216,8 @@ export async function PaymentStripemothod(formData: FormData) {
     payment_method_types: ["card"],
     billing_address_collection: "auto",
     line_items: [{ price: formData.get("priceId") as string, quantity: 1 }],
-    success_url: `http://localhost:3000/payment/${user.id}/${productId}/success`,
-    cancel_url: "http://localhost:3000/payment/cancel",
+    success_url: `https://blog-create-six.vercel.app/payment/${user.id}/${productId}/success`,
+    cancel_url: "https://blog-create-six.vercel.app/payment/cancel",
     customer_update: {
       address: "auto",
       name: "auto"

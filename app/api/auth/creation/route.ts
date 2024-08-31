@@ -25,5 +25,5 @@ export async function GET() {
       }
     });
   }
-  return NextResponse.redirect("http://localhost:3000/dashboard");
+  return NextResponse.redirect("https://blog-create-six.vercel.app/dashboard");
 }

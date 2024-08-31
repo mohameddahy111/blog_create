@@ -26,7 +26,7 @@ interface DleteArticle {
 export function DleteArticle({ item }: DleteArticle) {
   async function deleteArticle() {
     await axios
-      .delete(`http://localhost:3000/api/delete/${item.id}`)
+      .delete(`https://blog-create-six.vercel.app/api/delete/${item.id}`)
       .then((res) => {
         if (res.status === 200) {
           toast.success(res.data.message);
